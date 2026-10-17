@@ -60,6 +60,8 @@ public class RunnerController : MonoBehaviour
             || Input.GetKeyDown(KeyCode.W);
     }
 
+    public void SetForwardSpeed(float speed) => forwardSpeed = Mathf.Max(1f, speed);
+
     public void MoveLeft() => laneIndex = Mathf.Max(0, laneIndex - 1);
     public void MoveRight() => laneIndex = Mathf.Min(2, laneIndex + 1);
     public void Jump()
